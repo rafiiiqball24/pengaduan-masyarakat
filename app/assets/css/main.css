@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@theme {
+
+  --color-gray-900: #111B29;
+  
+  --color-primary: #F67011;
+  --color-primary-foreground: #FEFFFF;
+
+  --color-button-secondary: #F67011;
+  --color-button-outlined: #0A0A0A;
+  
+
+  --font-sans: "Geist", sans-serif;
+  
+  --text-sm: 14px;
+  --text-sm--line-height: 24px;
+  
+
+  --shadow-2: 0 0 2px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.14);
+  --shadow-wide: 0 4px 15px 0 rgba(16, 24, 40, 0.12);
+  
+
+  --radius-full: 9999px;
+
+  --font-mid: 500;
+
+
+
+  --color-surface-primary: #FFF7ED;
+  --color-text-primary: #E75A0F;
+  --color-text-neutral-primary: #0A0A0A;
+  --color-text-neutral-secondary: #757575;
+  --color-border-form-default: #EDEDED;
+  --color-bg-form: #FEFFFF;
+
+  --font-display: "Urbanist", sans-serif;
+  
+  --text-2xl: 48px;
+  --text-2xl--line-height: 54px;
+  --text-S: 14px;
+  --text-S--line-height: 22px;
+  --text-M: 20px;
+  --text-M--line-height: 28px;
+  
+  --radius-400: 16px;
+
+  --space-1200: 48px;
+  --space-500: 20px;
+
+  /* StepByStep Tokens */
+  --space-1000: 40px;
+  --space-2800: 112px;
+  --space-250: 10px;
+  --radius-500: 20px;
+  --color-bg-fill-secondary: #18171C;
+  --color-text-white-secondary: #E0E0E0;
+  --color-number-opacity: rgba(158, 158, 158, 0.20);
+  --color-number-opacity: rgba(158, 158, 158, 0.20);
+
+  /* UserTrust Tokens */
+  --space-300: 12px;
+  --text-L: 32px;
+  --text-L--line-height: 40px;
+  --text-SM-16: 16px;
+  --text-SM-16--line-height: 24px;
+  --color-black-95080: rgba(10, 10, 10, 0.80);
+}
+
+body {
+  overflow-x: hidden;
+}
+
+@layer utilities {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
+  .font-mid-strong {
+    font-weight: 540;
+  }
+
