@@ -84,10 +84,10 @@ const getFileExtension = (filename: string) => {
                                 <input type="file" ref="fileInput" class="hidden" @change="handleFileChange"
                                     accept="image/*,.pdf,.doc,.docx" multiple />
                                 <div
-                                    class="absolute top-full mt-2 hidden group-hover:flex flex-col items-center z-50 min-w-[150px]">
+                                    class="absolute top-full mt-2 hidden group-hover:flex flex-col z-50 min-w-[150px] left-0 items-start md:left-1/2 md:-translate-x-1/2 md:items-center">
                                     <div class="relative bg-[#1A1A1A] text-white text-xs px-3 py-2 rounded shadow-xl">
                                         <div
-                                            class="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-[#1A1A1A] rotate-45">
+                                            class="absolute -top-1 left-3 md:left-1/2 -translate-x-1/2 w-2 h-2 bg-[#1A1A1A] rotate-45">
                                         </div>
                                         Tambahkan dokumen
                                     </div>
@@ -101,11 +101,11 @@ const getFileExtension = (filename: string) => {
 
                             <div class="relative group flex flex-col items-center">
                                 <div
-                                    class="absolute top-full mt-2 hidden group-hover:flex flex-col items-center z-50 min-w-[150px]">
+                                    class="absolute top-full mt-2 hidden group-hover:flex flex-col z-50 min-w-[150px] left-0 items-start md:left-1/2 md:-translate-x-1/2 md:items-center">
                                     <div class="relative bg-[#1A1A1A] text-white text-xs px-3 py-2 rounded shadow-xl">
 
                                         <div
-                                            class="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-[#1A1A1A] rotate-45">
+                                            class="absolute -top-1 left-3 md:left-1/2 -translate-x-1/2 w-2 h-2 bg-[#1A1A1A] rotate-45">
                                         </div>
                                         Jangan tampilkan identitas saat mengirim laporan
                                     </div>
