@@ -10,7 +10,6 @@ const stats = [
     <section class="flex w-[1440px] h-[458px] px-[112px] py-10 items-center gap-10 mx-auto">
         <!-- Text Frame -->
         <div class="flex flex-col items-start gap-10 flex-[1_0_0]">
-            <!-- Headline & Description -->
             <div class="flex flex-col items-start gap-[12px] self-stretch">
                 <h2
                     class="w-[556px] text-text-neutral-primary font-sans text-L font-semibold leading-[40px] tracking-[-0.008px]">

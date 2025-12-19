@@ -11,6 +11,8 @@
             <Collaboration />
             <StepByStep />
             <UserTrust />
+            <Review />
+            <AppFooter />
         </main>
     </div>
 </template>

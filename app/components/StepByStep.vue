@@ -32,7 +32,6 @@ const steps = [
 
         <div v-for="step in steps" :key="step.number"
             class="flex w-[598px] h-[230px] p-5 items-center gap-[10px] rounded-500 bg-bg-fill-secondary">
-            <!-- Big Number -->
             <span
                 class="text-number-opacity font-sans text-[200px] font-bold leading-none flex items-center justify-center translate-y-2">{{
                     step.number }}</span>
@@ -48,7 +47,7 @@ const steps = [
                 <div class="flex flex-col items-start gap-px self-stretch">
                     <h3 class="self-stretch text-text-white-secondary font-sans text-base font-semibold leading-6">{{
                         step.title
-                    }}</h3>
+                        }}</h3>
                     <p class="self-stretch text-text-white-secondary font-sans text-sm font-normal leading-[22px]">{{
                         step.description }}</p>
                 </div>

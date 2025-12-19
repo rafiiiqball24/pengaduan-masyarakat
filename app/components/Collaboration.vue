@@ -13,9 +13,6 @@ const partners = [
 <template>
     <section
         class="flex flex-col items-center justify-center w-full py-[48px] gap-[20px] bg-white overflow-hidden relative">
-        <!-- Added relative for overlays -->
-
-        <!-- Gradient Overlays -->
         <div
             class="absolute top-0 bottom-0 left-0 w-[200px] bg-gradient-to-r from-white to-transparent z-10 pointer-events-none">
         </div>
@@ -26,19 +23,18 @@ const partners = [
         <div class="flex items-center gap-[48px] w-full overflow-hidden">
             <!-- Marquee Container -->
             <div class="flex items-center gap-[48px] animate-marquee whitespace-nowrap">
-                <!-- First Set -->
                 <div v-for="partner in partners" :key="partner.name"
                     class="flex-shrink-0 flex items-center justify-center">
                     <img :src="partner.src" :alt="partner.name"
                         :style="{ width: partner.width, height: partner.height }" class="object-contain" />
                 </div>
-                <!-- Second Set (Duplicate for seamless loop) -->
+
                 <div v-for="partner in partners" :key="`${partner.name}-dup`"
                     class="flex-shrink-0 flex items-center justify-center">
                     <img :src="partner.src" :alt="partner.name"
                         :style="{ width: partner.width, height: partner.height }" class="object-contain" />
                 </div>
-                <!-- Third Set (Extra safety for wide screens) -->
+
                 <div v-for="partner in partners" :key="`${partner.name}-dup-2`"
                     class="flex-shrink-0 flex items-center justify-center">
                     <img :src="partner.src" :alt="partner.name"
