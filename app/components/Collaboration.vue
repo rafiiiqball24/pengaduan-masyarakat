@@ -4,7 +4,7 @@ const partners = [
     { name: 'BlackRock', src: '/icons/BlackRock.svg', width: '277px', height: '39px' },
     { name: 'CBRE', src: '/icons/CBREGroup.svg', width: '168px', height: '40px' },
     { name: 'Ceridian', src: '/icons/Ceridian.svg', width: '128px', height: '40px' },
-    { name: 'Dentsply', src: '/icons/Dentsply.svg', width: '143px', height: '40px' },
+     { name: 'Dentsply', src: '/icons/Dentsply.svg', width: '143px', height: '40px' },
     { name: 'Everest', src: '/icons/Everest.svg', width: '192px', height: '40px' },
     { name: 'Expedia', src: '/icons/expedia.svg', width: '274px', height: '40px' },
 ]
