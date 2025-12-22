@@ -28,28 +28,40 @@ const steps = [
 </script>
 
 <template>
-    <section class="flex flex-wrap items-start content-start justify-center w-full px-[112px] py-[40px] gap-5">
+    <section class="flex flex-col justify-center items-center w-full px-[16px] py-[40px] gap-[8px] 
+        xl:flex-row xl:flex-wrap xl:items-start xl:content-start xl:px-[112px] xl:gap-5">
 
-        <div v-for="step in steps" :key="step.number"
-            class="flex w-[598px] h-[230px] p-5 items-center gap-[10px] rounded-500 bg-bg-fill-secondary">
+        <div v-for="step in steps" :key="step.number" class="flex w-full py-[16px] px-[20px] items-center gap-[10px] rounded-[16px] bg-[#18171C]
+            md:max-w-[380px]
+            xl:w-[598px] xl:h-[230px] xl:max-w-none xl:p-5 xl:rounded-500 xl:bg-bg-fill-secondary">
+
             <span
-                class="text-number-opacity font-sans text-[200px] font-bold leading-none flex items-center justify-center translate-y-2">{{
-                    step.number }}</span>
+                class="font-['Geist'] text-[rgba(158,158,158,0.20)] text-[64px] font-bold leading-[64px] tracking-[-0.015px]
+                xl:text-number-opacity xl:font-sans xl:text-[200px] xl:leading-none xl:flex xl:items-center xl:justify-center xl:translate-y-2 xl:tracking-normal">
+                {{ step.number }}
+            </span>
 
             <!-- Content Frame -->
-            <div class="flex w-[458px] flex-col items-start gap-[10px] shrink-0">
+            <div class="flex flex-col items-start gap-[10px] flex-1 min-w-0
+                xl:shrink-0 xl:w-[458px] xl:flex-none">
+
                 <!-- Icon -->
-                <div class="flex w-8 h-8 p-[2.667px] justify-center items-center">
+                <div class="flex w-[20px] h-[20px] p-[1.667px] justify-center items-center
+                    xl:w-8 xl:h-8 xl:p-[2.667px]">
                     <img :src="step.icon" :alt="step.title" class="w-full h-full" />
                 </div>
 
                 <!-- Text -->
                 <div class="flex flex-col items-start gap-px self-stretch">
-                    <h3 class="self-stretch text-text-white-secondary font-sans text-base font-semibold leading-6">{{
-                        step.title
-                        }}</h3>
-                    <p class="self-stretch text-text-white-secondary font-sans text-sm font-normal leading-[22px]">{{
-                        step.description }}</p>
+                    <h3 class="self-stretch text-[#E0E0E0] font-['Geist'] text-[16px] font-semibold leading-[24px]
+                        xl:text-text-white-secondary xl:font-sans xl:text-base xl:leading-6">
+                        {{ step.title }}
+                    </h3>
+
+                    <p class="self-stretch text-[#E0E0E0] font-['Geist'] text-[14px] font-normal leading-[22px] tracking-tight
+                        xl:text-text-white-secondary xl:font-sans xl:text-sm xl:tracking-normal">
+                        {{ step.description }}
+                    </p>
                 </div>
             </div>
         </div>
