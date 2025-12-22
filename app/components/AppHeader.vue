@@ -41,10 +41,11 @@ const isOpen = ref(false)
                 Replication Request
             </NuxtLink>
 
-            <button
+            <button @click="$router.push('/login')"
                 class="flex items-center justify-center gap-1 px-3 py-2 rounded-full bg-button-secondary text-primary-foreground shadow-2 font-sans text-sm font-medium leading-[24px] hover:opacity-90 transition-opacity cursor-pointer">
                 Masuk Sebagai Warga
             </button>
+
         </div>
 
         <!-- Mobile Menu Button -->
@@ -87,10 +88,11 @@ const isOpen = ref(false)
 
             <!-- Mobile Actions -->
             <div class="flex flex-col justify-center items-center gap-3 p-4 bg-white">
-                <button
-                    class="flex items-center justify-center w-full px-3 py-2 gap-1 rounded-full bg-[#F67011] text-[#FEFFFF] shadow-2 font-sans text-[16px] font-medium leading-[24px]">
+                <button @click="$router.push('/login')"
+                    class="flex items-center justify-center w-full px-3 py-2 gap-1 rounded-full bg-[#F67011] text-[#FEFFFF] shadow-2 font-sans text-[16px] font-medium leading-[24px] cursor-pointer hover:opacity-90 transition-opacity">
                     Masuk Sebagai Warga
                 </button>
+
                 <NuxtLink to="/replication"
                     class="flex items-center justify-center w-full px-3 py-2 gap-1 rounded-full border border-[#E0E0E0] text-[#0A0A0A] font-sans text-[16px] font-medium leading-[24px]">
                     Replication Request

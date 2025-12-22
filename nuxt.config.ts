@@ -14,6 +14,11 @@ export default defineNuxtConfig({
       tsconfigPaths(),
     ],
   },
+  runtimeConfig: {
+    public: {
+      googleClientId: process.env.NUXT_PUBLIC_GOOGLE_CLIENT_ID || '',
+    }
+  },
   app: {
     head: {
       link: [

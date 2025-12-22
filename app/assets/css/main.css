@@ -93,7 +93,14 @@ body {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
 }
-  .font-mid-strong {
-    font-weight: 540;
+
+@layer components {
+  .text-quote {
+    font-family: var(--font-sans);
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: -0.005px;
   }
+}
 
