@@ -16,7 +16,7 @@ const isOpen = ref(false)
 
         <!-- Desktop Navigation -->
         <nav class="hidden xl:flex items-center gap-10 -translate-x-50">
-            <NuxtLink to="/"
+            <NuxtLink to="/homepage"
                 class="flex items-center justify-center gap-1 text-button-secondary font-sans text-sm font-mid-strong leading-[24px]">
                 Homepage
             </NuxtLink>
@@ -68,20 +68,20 @@ const isOpen = ref(false)
 
             <!-- Mobile Navigation -->
             <nav class="flex flex-col items-start gap-3 px-4 py-3 pb-6 flex-1 bg-white">
-                <NuxtLink to="/"
-                    class="flex w-full py-3 justify-start items-center gap-1 rounded-[10px] text-[#F67011] font-sans text-[16px] font-medium leading-[24px]">
+                <NuxtLink to="/homepage"
+                    :class="['flex w-full py-3 justify-start items-center gap-1 rounded-[10px] font-sans text-[16px] font-medium leading-[24px]', $route.path === '/homepage' ? 'text-[#F67011]' : 'text-[#0A0A0A] opacity-60 hover:opacity-100']">
                     Homepage
                 </NuxtLink>
                 <NuxtLink to="/about"
-                    class="flex w-full py-3 justify-start items-center gap-1 rounded-[10px] text-[#0A0A0A] opacity-60 hover:opacity-100 font-sans text-[16px] font-medium leading-[24px]">
+                    :class="['flex w-full py-3 justify-start items-center gap-1 rounded-[10px] font-sans text-[16px] font-medium leading-[24px]', $route.path === '/about' ? 'text-[#F67011]' : 'text-[#0A0A0A] opacity-60 hover:opacity-100']">
                     Tentang Kami
                 </NuxtLink>
                 <NuxtLink to="/faq"
-                    class="flex w-full py-3 justify-start items-center gap-1 rounded-[10px] text-[#0A0A0A] opacity-60 hover:opacity-100 font-sans text-[16px] font-medium leading-[24px]">
+                    :class="['flex w-full py-3 justify-start items-center gap-1 rounded-[10px] font-sans text-[16px] font-medium leading-[24px]', $route.path === '/faq' ? 'text-[#F67011]' : 'text-[#0A0A0A] opacity-60 hover:opacity-100']">
                     FAQ
                 </NuxtLink>
                 <NuxtLink to="/contact"
-                    class="flex w-full py-3 justify-start items-center gap-1 rounded-[10px] text-[#0A0A0A] opacity-60 hover:opacity-100 font-sans text-[16px] font-medium leading-[24px]">
+                    :class="['flex w-full py-3 justify-start items-center gap-1 rounded-[10px] font-sans text-[16px] font-medium leading-[24px]', $route.path === '/contact' ? 'text-[#F67011]' : 'text-[#0A0A0A] opacity-60 hover:opacity-100']">
                     Kontak
                 </NuxtLink>
             </nav>
