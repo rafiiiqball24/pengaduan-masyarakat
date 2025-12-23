@@ -6,7 +6,7 @@ const isOpen = ref(false)
 
 <template>
     <header
-        class="w-full max-w-[1440px] mx-auto flex items-center justify-between py-5 px-4 md:px-8 lg:px-12 xl:px-[112px] bg-[#FEFFFF] lg:bg-white transition-all duration-300 relative">
+        class="w-full max-w-[1440px] mx-auto flex items-center justify-between py-5 px-4 md:px-8 lg:px-12 xl:px-[112px] bg-[#FEFFFF] lg:bg-white transition-all duration-300 sticky top-0 z-50">
 
         <!-- Logo Section -->
         <div class="flex items-center justify-center w-24 gap-3 xl:w-auto xl:justify-start xl:gap-2 xl:-translate-x-10">
@@ -16,20 +16,19 @@ const isOpen = ref(false)
 
         <!-- Desktop Navigation -->
         <nav class="hidden xl:flex items-center gap-10 -translate-x-50">
-            <NuxtLink to="/homepage"
-                class="flex items-center justify-center gap-1 text-button-secondary font-sans text-sm font-mid-strong leading-[24px]">
+            <NuxtLink to="/homepage" class="nav-link" :class="{ 'nav-active': $route.path === '/homepage' }">
                 Homepage
             </NuxtLink>
-            <NuxtLink to="/about"
-                class="flex items-center justify-center gap-1 text-button-outlined font-sans text-sm font-mid-strong leading-[24px] opacity-60 hover:opacity-100">
+
+            <NuxtLink to="/about" class="nav-link" :class="{ 'nav-active': $route.path === '/about' }">
                 Tentang Kami
             </NuxtLink>
-            <NuxtLink to="/faq"
-                class="flex items-center justify-center gap-1 text-button-outlined font-sans text-sm font-mid-strong leading-[24px] opacity-60 hover:opacity-100">
+
+            <NuxtLink to="/faq" class="nav-link" :class="{ 'nav-active': $route.path === '/faq' }">
                 FAQ
             </NuxtLink>
-            <NuxtLink to="/contact"
-                class="flex items-center justify-center gap-1 text-button-outlined font-sans text-sm font-mid-strong leading-[24px] opacity-60 hover:opacity-100">
+
+            <NuxtLink to="/contact" class="nav-link" :class="{ 'nav-active': $route.path === '/contact' }">
                 Kontak
             </NuxtLink>
         </nav>
@@ -101,3 +100,28 @@ const isOpen = ref(false)
         </div>
     </header>
 </template>
+
+<style scoped>
+.nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    font-family: var(--font-sans);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    color: var(--color-button-outlined);
+    opacity: 0.6;
+    transition: opacity 0.2s;
+}
+
+.nav-link:hover {
+    opacity: 1;
+}
+
+.nav-active {
+    opacity: 1;
+    color: var(--color-button-secondary);
+}
+</style>
