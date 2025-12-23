@@ -28,5 +28,13 @@ export default defineNuxtConfig({
         { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap' }
       ]
     }
+  },
+  hooks: {
+    'components:dirs': (dirs) => {
+      dirs.push({
+        path: '~/app/components/home',
+        pathPrefix: false
+      })
+    }
   }
 })
