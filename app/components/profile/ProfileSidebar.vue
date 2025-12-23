@@ -32,7 +32,7 @@ const confirmLogout = () => {
     <aside class="w-64 bg-bg-form border-r border-gray-100 hidden md:flex flex-col items-center py-8 min-h-screen">
         <!-- Logo area -->
         <div class="mb-10 flex flex-col items-center">
-            <img src="/icons/herms_logo.svg.svg" alt="Logo" class="w-12 h-12 mb-2" />
+            <img src="/logo.svg" alt="Logo" class="w-12 h-12 mb-2" />
         </div>
 
         <!-- User Mini Profile -->

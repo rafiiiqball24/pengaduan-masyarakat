@@ -32,8 +32,7 @@ export default defineNuxtConfig({
   hooks: {
     'components:dirs': (dirs) => {
       dirs.push({
-        path: '~/app/components/home',
-        pathPrefix: false
+        path: '~/components/home',
       })
     }
   }
