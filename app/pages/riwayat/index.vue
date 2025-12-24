@@ -23,12 +23,10 @@ const filteredComplaints = computed(() => {
 const showCancelAlert = ref(false)
 
 const handleCancel = (complaintId: string) => {
-    // In a real app, you would call an API here
-    // For now, we simulate success
     showCancelAlert.value = true
     setTimeout(() => {
         showCancelAlert.value = false
-    }, 5000) // Auto hide after 5 seconds
+    }, 5000)
 }
 </script>
 
@@ -77,7 +75,7 @@ const handleCancel = (complaintId: string) => {
                     leave-from-class="transform translate-y-0 opacity-100"
                     leave-to-class="transform translate-y-full opacity-0">
                     <div v-if="showCancelAlert"
-                        class="fixed bottom-4 left-4 right-4 md:left-auto md:right-8 z-50 md:max-w-md md:w-[400px]">
+                        class="fixed bottom-4 left-4 right-4 md:left-1/2 md:-translate-x-1/2 z-50 md:max-w-md md:w-[400px]">
                         <div
                             class="bg-[#ECFDF3] border border-[#D1FADF] rounded-xl p-4 flex items-center justify-between shadow-lg h-14">
                             <div class="flex items-center gap-3">

@@ -11,7 +11,7 @@ const menuItems = [
 </script>
 
 <template>
-    <aside class="w-64 bg-bg-form border-r border-gray-100 hidden md:flex flex-col items-center py-8 min-h-screen">
+    <aside class="w-80 bg-bg-form border-r border-gray-100 hidden md:flex flex-col items-center py-8 min-h-screen">
         <!-- Logo area -->
         <div class="mb-10 flex flex-col items-center">
             <img src="/icons/herms_logo.svg.svg" alt="Logo" class="w-12 h-12 mb-2" />
@@ -29,10 +29,11 @@ const menuItems = [
         <!-- Navigation -->
         <nav class="w-full px-4 space-y-2">
             <NuxtLink v-for="item in menuItems" :key="item.name" :to="item.path"
-                class="flex items-center gap-3 px-4 py-3 rounded-lg transition-all duration-200" :class="[
-                    item.active
+                @click="handleItemClick($event, item.path)"
+                class="flex items-center gap-3 px-4 py-2 rounded-xl transition-all duration-200" :class="[
+                    route.path.startsWith(item.path) && item.path !== '#logout'
                         ? 'bg-primary text-primary-foreground shadow-md'
-                        : 'text-text-neutral-secondary hover:bg-surface-primary hover:text-text-neutral-primary'
+                        : 'hover:bg-gray-100 text-text-neutral-primary'
                 ]">
                 <img v-if="typeof item.icon === 'string'" :src="item.icon" class="w-5 h-5" alt="" />
                 <component v-else :is="item.icon" :size="20" />
