@@ -76,12 +76,12 @@ const handleSave = (updatedUser: { name: string; email: string; phone: string })
 
                         <div class="flex flex-row gap-3">
                             <button
-                                class="px-4 py-2 md:px-6 md:py-2.5 border border-border-form-default text-primary rounded-full text-xs md:text-sm font-medium hover:bg-surface-primary transition-colors order-2 sm:order-1">
-                                Hapus gambar
+                                class="px-4 py-2 md:px-3 md:py-2 bg-primary text-primary-foreground rounded-full text-xs md:text-base font-medium hover:bg-orange-600 transition-colors duration-300 shadow-2">
+                                Ubah Gambar
                             </button>
                             <button
-                                class="px-4 py-2 md:px-6 md:py-2.5 bg-primary text-primary-foreground rounded-full text-xs md:text-sm font-medium hover:opacity-90 transition-colors shadow-2 order-1 sm:order-2">
-                                Ubah Gambar
+                                class="px-4 py-2 md:px-3 md:py-2 border-2 border-border-form-default text-primary rounded-full text-xs md:text-base font-medium hover:bg-surface-primary transition-colors">
+                                Hapus gambar
                             </button>
                         </div>
                     </div>
