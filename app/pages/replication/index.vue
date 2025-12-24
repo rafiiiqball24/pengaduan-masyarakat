@@ -44,7 +44,7 @@
                                     class="flex items-center gap-[6px] self-stretch text-[#0A0A0A] font-sans text-[14px] font-medium leading-[22px]">
                                     Nama Lengkap
                                 </label>
-                                <input type="text" placeholder="Masukkan nama lengkap Anda"
+                                <input type="text" placeholder="Masukkan nama lengkap Anda" v-model="formData.name"
                                     class="flex items-center w-full px-[16px] py-[12px] gap-[8px] rounded-300 border border-[#EDEDED] bg-[#FEFFFF] text-text-neutral-secondary font-sans text-[16px] font-normal leading-[24px] outline-none focus:border-[#F67011]" />
                             </div>
 
@@ -54,7 +54,7 @@
                                     class="flex items-center gap-[6px] self-stretch text-[#0A0A0A] font-sans text-[14px] font-medium leading-[22px]">
                                     Alamat Email
                                 </label>
-                                <input type="email" placeholder="contoh@email.com"
+                                <input type="email" placeholder="contoh@email.com" v-model="formData.email"
                                     class="flex items-center w-full px-[16px] py-[12px] gap-[8px] rounded-300 border border-[#EDEDED] bg-[#FEFFFF] text-text-neutral-secondary font-sans text-[16px] font-normal leading-[24px] outline-none focus:border-[#F67011]" />
                             </div>
 
@@ -64,7 +64,7 @@
                                     class="flex items-center gap-[6px] self-stretch text-[#0A0A0A] font-sans text-[14px] font-medium leading-[22px]">
                                     Nomor Telepon
                                 </label>
-                                <input type="tel" placeholder="08xx - xxxx -- xxxx"
+                                <input type="tel" placeholder="08xx - xxxx -- xxxx" v-model="formData.phone"
                                     class="flex items-center w-full px-[16px] py-[12px] gap-[8px] rounded-300 border border-[#EDEDED] bg-[#FEFFFF] text-text-neutral-secondary font-sans text-[16px] font-normal leading-[24px] outline-none focus:border-[#F67011]" />
                             </div>
 
@@ -75,6 +75,7 @@
                                     Pesan Pengajuan
                                 </label>
                                 <textarea placeholder="Tuliskan informasi atau pesan Anda di sini..."
+                                    v-model="formData.message"
                                     class="flex flex-1 w-full px-[16px] py-[12px] items-start gap-[8px] self-stretch rounded-300 border border-[#EDEDED] bg-[#FEFFFF] text-text-neutral-secondary font-sans text-[16px] font-normal leading-[24px] outline-none focus:border-[#F67011] resize-none"></textarea>
                             </div>
                         </div>
@@ -82,7 +83,7 @@
                         <!-- Checkbox -->
                         <div class="flex p-[4px] items-center gap-[8px] self-stretch">
                             <div class="relative flex items-center justify-center w-[16px] h-[16px]">
-                                <input type="checkbox" id="agreement"
+                                <input type="checkbox" id="agreement" v-model="formData.agreement"
                                     class="peer w-full h-full appearance-none rounded-[4px] border border-bg-fill-secondary checked:bg-[#F67011] checked:border-[#F67011] cursor-pointer transition-colors" />
                                 <svg class="absolute w-3 h-3 text-white hidden peer-checked:block pointer-events-none"
                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
@@ -100,7 +101,7 @@
                         </div>
 
                         <!-- Submit Button -->
-                        <button
+                        <button @click="handleSubmit"
                             class="flex px-[16px] py-[12px] justify-center items-center gap-[8px] self-stretch rounded-300 bg-[#F67011] text-[#FEFFFF] font-sans text-[20px] font-medium leading-[28px] tracking-[-0.003px] shadow-2 hover:bg-[#e06000] transition-colors cursor-pointer">
                             Kirim
                         </button>
@@ -121,8 +122,50 @@
         </main>
 
         <AppFooter />
+
+        <!-- Success Modal/Backdrop -->
+        <div v-if="showSuccess"
+            class="fixed inset-0 z-50 flex items-end justify-center pb-10 bg-black/20 backdrop-blur-sm transition-all duration-300">
+            <div
+                class="flex w-[343px] py-[12px] px-[16px] items-center gap-[10px] shrink-0 rounded-[8px] border border-[#D1FDD7] bg-[#E8FCF5] shadow-[0_1.25px_4px_0_#F2F2F2]">
+                <span class="flex-1 text-[#0E9B77] font-sans text-[14px] font-semibold leading-[22px]">
+                    Permohonan berhasil dikirim!
+                </span>
+                <button @click="showSuccess = false"
+                    class="flex py-[4px] px-[12px] justify-center items-center gap-[4px] rounded-[8px] text-[#0A0A0A] font-sans text-[12px] font-medium leading-[18px] hover:bg-[#D1FDD7] transition-colors cursor-pointer">
+                    Tutup
+                </button>
+            </div>
+        </div>
     </div>
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue';
+
+const showSuccess = ref(false);
+
+const formData = ref({
+    name: '',
+    email: '',
+    phone: '',
+    message: '',
+    agreement: false
+});
+
+const handleSubmit = () => {
+    showSuccess.value = true;
+    // Reset form data
+    formData.value = {
+        name: '',
+        email: '',
+        phone: '',
+        message: '',
+        agreement: false
+    };
+
+    setTimeout(() => {
+        showSuccess.value = false;
+    }, 3000);
+};
 </script>
