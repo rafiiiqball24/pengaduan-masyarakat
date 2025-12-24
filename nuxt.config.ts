@@ -2,6 +2,8 @@
 import tailwindcss from "@tailwindcss/vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 
+import svgLoader from 'vite-svg-loader'
+
 export default defineNuxtConfig({
   future: {
     compatibilityVersion: 4,
@@ -12,6 +14,7 @@ export default defineNuxtConfig({
     plugins: [
       tailwindcss(),
       tsconfigPaths(),
+      svgLoader()
     ],
   },
   runtimeConfig: {

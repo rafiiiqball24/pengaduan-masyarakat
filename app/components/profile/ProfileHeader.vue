@@ -1,24 +1,14 @@
 <script setup lang="ts">
-import { computed } from 'vue'
-import { useRoute } from 'vue-router'
-
-const route = useRoute()
-
-const pageTitle = computed(() => {
-    if (route.path.startsWith('/riwayat')) return 'Riwayat Pengaduan'
-    return 'Profil'
-})
+// Props can be added later if dynamic links are needed
 </script>
 
 <template>
     <header class="w-full h-20 bg-bg-form px-8 hidden md:flex items-center justify-between">
         <!-- Left: Breadcrumb/Title -->
         <div class="flex items-center gap-2 text-sm font-sans">
-            <template v-if="!route.path.startsWith('/riwayat')">
-                <span class="text-text-neutral-secondary">Home</span>
-                <span class="text-text-neutral-secondary">›</span>
-            </template>
-            <span class="font-semibold text-text-neutral-primary">{{ pageTitle }}</span>
+            <span class="text-text-neutral-secondary">Home</span>
+            <span class="text-text-neutral-secondary">›</span>
+            <span class="font-semibold text-text-neutral-primary">Profil</span>
         </div>
 
         <!-- Right: Navigation & User -->

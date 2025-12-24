@@ -23,7 +23,7 @@ const stats = [
                 </h2>
 
                 <!-- Desc -->
-                <p class="self-stretch text-left text-[rgba(10,10,10,0.80)] font-['Geist'] text-[14px] font-normal not-italic leading-[22px]
+                <p class="self-stretch text-left text-black-95080 font-['Geist'] text-[14px] font-normal not-italic leading-[22px]
                     xl:w-[556px]">
                     Website ini hadir untuk memudahkan setiap warga dalam menyampaikan laporan masalah di lingkungan
                     sekitar. Dengan sistem yang sederhana dan cepat, siapa pun dapat berpartisipasi menjaga kenyamanan
@@ -47,7 +47,7 @@ const stats = [
                     </span>
 
                     <!-- Label -->
-                    <span class="self-stretch text-[#757575] font-['Geist'] text-[12px] font-normal leading-[18px] text-center whitespace-pre-line
+                    <span class="self-stretch text-text-neutral-secondary font-['Geist'] text-[12px] font-normal leading-[18px] text-center whitespace-pre-line
                         xl:text-text-neutral-secondary xl:font-sans xl:text-SM-16 xl:leading-[24px]">
                         {{ stat.label }}
                     </span>
@@ -57,8 +57,8 @@ const stats = [
 
         <!-- Image -->
 
-        <div class="h-[209px] self-stretch rounded-[20px] bg-cover bg-center bg-no-repeat order-first
-            xl:h-[378px] xl:flex-[1_0_0] xl:rounded-500 xl:order-none"
+        <div class="h-[209px] self-stretch rounded-500 bg-cover bg-center bg-no-repeat order-first
+            xl:h-[378px] xl:flex-[1_0_0] xl:rounded-500 xl:order-0"
             style="background-image: url('/images/usertrust.webp');">
         </div>
     </section>
