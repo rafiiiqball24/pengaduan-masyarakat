@@ -35,10 +35,10 @@ const isOpen = ref(false)
 
         <!-- Desktop Actions -->
         <div class="hidden xl:flex items-center gap-10">
-            <NuxtLink to="/replication"
-                class="flex items-center justify-center gap-1 text-button-outlined font-sans text-sm font-mid-strong leading-[24px]">
+            <NuxtLink to="/replication" class="nav-link" :class="{ 'nav-active': $route.path === '/replication' }">
                 Replication Request
             </NuxtLink>
+
 
             <button @click="$router.push('/login')"
                 class="flex items-center justify-center gap-1 px-3 py-2 rounded-full bg-button-secondary text-primary-foreground shadow-2 font-sans text-sm font-medium leading-[24px] hover:opacity-90 transition-opacity cursor-pointer">
@@ -92,10 +92,15 @@ const isOpen = ref(false)
                     Masuk Sebagai Warga
                 </button>
 
-                <NuxtLink to="/replication"
-                    class="flex items-center justify-center w-full px-3 py-2 gap-1 rounded-full border border-[#E0E0E0] text-[#0A0A0A] font-sans text-[16px] font-medium leading-[24px]">
+                <NuxtLink to="/replication" :class="[
+                    'flex items-center justify-center w-full px-3 py-2 gap-1 rounded-full font-sans text-[16px] font-medium leading-[24px] transition-all',
+                    $route.path === '/replication'
+                        ? 'bg-[#F67011] text-[#FEFFFF]'
+                        : 'border border-[#E0E0E0] text-[#0A0A0A]'
+                ]">
                     Replication Request
                 </NuxtLink>
+
             </div>
         </div>
     </header>

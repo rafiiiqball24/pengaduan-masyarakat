@@ -1,7 +1,11 @@
 <script setup lang="ts">
-import { LogOut } from 'lucide-vue-next'
-import { UserCircle } from 'lucide-vue-next'
+import { LogOut, UserCircle } from 'lucide-vue-next'
 
+const route = useRoute()
+
+const handleItemClick = (event: Event, path: string) => {
+    // Logic later
+}
 
 const menuItems = [
     { name: 'Profile', icon: UserCircle, path: '/profil', active: true },
